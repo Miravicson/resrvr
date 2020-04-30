@@ -1,0 +1,116 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.css";
+
+.padding {
+  padding-top: 0.75rem;
+}
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+.time-text {
+  color: blueviolet;
+}
+
+.event-title {
+  font-weight: bolder;
+  color: #222;
+  letter-spacing: 0.001rem;
+}
+
+*:last-child {
+  order: unset !important;
+}
+
+*:first-child {
+  order: unset !important;
+}
+
+nav {
+  display: flex;
+  flex-basis: 100%;
+}
+
+
+.nav {
+  display: flex;
+  flex-basis: 100%;
+  padding: 0 1.5rem;
+}
+
+.nav.right {
+  justify-content: flex-end;
+}
+
+
+ul.nav > li + li {
+  margin-left: 2rem;
+}
+
+.summary {
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.summary .pull-right {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.summary + .summary {
+  margin-top: .5rem;
+}
+
+ .form-control {
+  appearance: none;
+  background-color: transparent;
+  border: 0.1rem solid #d1d1d1;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  box-sizing: inherit;
+  height: 3.8rem;
+  padding: 0.6rem 1.0rem;
+  width: 100%;
+}
+
+.list {
+  position: relative;
+}
+
+.fab {
+  background-color: hsl(240, 100%, 50%);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 0.3rem;
+}
+
+.fab:hover {
+  background-color: hsl(255, 100%, 60%);
+  color: white;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.fab.right {
+  position: absolute;
+  right: 1.5rem;
+}
+.fab.top {
+  position: absolute;
+  top: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+.help-block {
+  color: red;
+  position: absolute;
+  top: 4.8rem;
+  right: 4.5rem;
+}

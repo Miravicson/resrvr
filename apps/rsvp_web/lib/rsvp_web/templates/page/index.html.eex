@@ -1,0 +1,14 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "RSVP" %></h1>
+  <p>Save all your events and get reminders ahead of time!!!</p>
+    <div class="padding">
+      <%= render(RsvpWeb.SharedView, "add-event.html", conn: @conn, class: []) %>
+    </div>
+</section>
+
+<section class="row">
+  <article class="column">
+  </article>
+  <article class="column">
+  </article>
+</section>

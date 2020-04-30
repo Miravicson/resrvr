@@ -1,0 +1,1 @@
+<%= link "Add Event", to: Routes.event_path(@conn, :create), type: "button", class: Enum.join(["fab" | @class], " ") %>
