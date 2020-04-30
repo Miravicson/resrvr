@@ -21,7 +21,7 @@ config :rsvp_web, RsvpWeb.Endpoint,
     config :rsvp_web, RsvpWeb.Endpoint,
       ...
       url: [scheme: "https", host: "resrvr", port: 443],
-      force_ssl:[rewrite_on: [:x_forwarded_proto]],
+      force_ssl: [rewrite_on: [:x_forwarded_proto]]
       # https: [
       #   :inet6,
       #   port: 443,
