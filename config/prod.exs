@@ -19,7 +19,6 @@ config :rsvp_web, RsvpWeb.Endpoint,
 # to the previous section and set your `:url` port to 443:
 #
     config :rsvp_web, RsvpWeb.Endpoint,
-      ...
       url: [scheme: "https", host: "resrvr", port: 443],
       force_ssl: [rewrite_on: [:x_forwarded_proto]]
       # https: [
