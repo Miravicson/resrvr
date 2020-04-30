@@ -18,16 +18,17 @@ config :rsvp_web, RsvpWeb.Endpoint,
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-#     config :rsvp_web, RsvpWeb.Endpoint,
-#       ...
-#       url: [host: "example.com", port: 443],
-#       https: [
-#         :inet6,
-#         port: 443,
-#         cipher_suite: :strong,
-#         keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
-#         certfile: System.get_env("SOME_APP_SSL_CERT_PATH")
-#       ]
+    config :rsvp_web, RsvpWeb.Endpoint,
+      ...
+      url: [scheme: "https", host: "resrvr", port: 443],
+      force_ssl:[rewrite_on: [:x_forwarded_proto]],
+      # https: [
+      #   :inet6,
+      #   port: 443,
+      #   cipher_suite: :strong,
+      #   keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
+      #   certfile: System.get_env("SOME_APP_SSL_CERT_PATH")
+      # ]
 #
 # The `cipher_suite` is set to `:strong` to support only the
 # latest and more secure SSL ciphers. This means old browsers
@@ -51,7 +52,7 @@ config :rsvp_web, RsvpWeb.Endpoint,
 config :rsvp, Rsvp.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
-  pool_size: String.to_integer(System.get_env("POOL_SIZE") || 10),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
 
 # Do not print debug messages in production
